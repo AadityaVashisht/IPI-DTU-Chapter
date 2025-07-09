@@ -1,0 +1,138 @@
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #6d1e1e, #953939);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 30px;
+  background-color: #6d1e1e;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.site-title {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+}
+
+/* Nav Bar */
+nav {
+  background-color: #3d0c0c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #ffffff22;
+  border-radius: 6px;
+}
+
+/* Section Headers */
+h2 {
+  text-align: center;
+  position: relative;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #6d1e1e;
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+/* Intro & Mentor */
+.intro-container,
+.mentor-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.intro-img,
+.mentor-img {
+  flex: 1 1 300px;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-text,
+.mentor-text {
+  flex: 2;
+  padding: 20px;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #6d1e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}

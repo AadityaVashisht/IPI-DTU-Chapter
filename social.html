@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPI Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #6d1e1e;
+      color: white;
+      padding: 20px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo {
+      height: 60px;
+    }
+    .site-title {
+      font-size: 1.8rem;
+    }
+    nav {
+      background-color: #3d0c0c;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 40px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .gallery-grid a img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin: 20px 0 10px;
+    }
+    .flipbook-container iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+    .insta-section iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #6d1e1e;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <div class="logo-container">
+      <img src="logo.png" alt="IPI Logo" class="logo">
+      <h1 class="site-title">Indian Plastics Institute DTU Chapter</h1>
+    </div>
+  </header>
+
+  <nav data-aos="fade-up">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About IPI</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="report.html">Annual Report</a></li>
+      <li><a href="digest.html">Research Digest</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="social.html">Social Media</a></li>
+    </ul>
+  </nav>
+
+  <main>
+  <section class="insta-section" data-aos="fade-up">
+  <h2>IPI DTU on Instagram</h2>
+  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+  <iframe src="//lightwidget.com/widgets/d233723eab5a5851b988d430308a7116.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+</section>
+
+<section class="linkedin-section" data-aos="fade-up">
+  <h2>IPI DTU on LinkedIn</h2>
+  <div style="text-align:center">
+    <a href="https://www.linkedin.com/company/indian-plastics-institute-dtu-chapter/" target="_blank">
+      <img src="linkedin-preview.png" alt="LinkedIn IPI DTU" style="width:100%; max-width:2000px; height:auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    </a>
+  </div>
+</section>
+
+<section class="youtube-section" data-aos="fade-up">
+  <h2>IPI DTU on Youtube</h2>
+  <div style="text-align:center">
+    <a href="https://www.youtube.com/@IPIDTUchapter" target="_blank">
+      <img src="youtube-preview.png" alt="Youtube IPI DTU" style="width:100%; max-width:2000px; height:auto; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    </a>
+  </div>
+</section>
+  </main>
+
+  <footer data-aos="zoom-in">
+    <p>&copy; 2025 IPI DTU. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
