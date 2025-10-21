@@ -1,0 +1,63 @@
+name: Deploy Vite Project to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # This is the magic line:
+    # It tells all 'run' commands to start inside your vite folder
+    defaults:
+      run:
+        working-directory: ./vitejs-vite-hy7ny1fe
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          # This tells the cache where to find the lock file
+          cache-dependency-path: vitejs-vite-hy7ny1fe/package-lock.json
+
+      - name: Install dependencies
+        run: npm install # This now runs inside the subfolder
+
+      - name: Build
+        run: npm run build # This also runs inside the subfolder
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # This path must still be relative to the root
+          path: 'vitejs-vite-hy7ny1fe/dist'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
