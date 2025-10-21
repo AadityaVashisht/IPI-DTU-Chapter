@@ -197,15 +197,14 @@ Let’s know more about them….</p>
       <section id="social" data-aos="fade-up">
         <h2>IPI DTU on Social Media</h2>
         <div className="insta-section">
-          <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-          <iframe
-            src="//lightwidget.com/widgets/0ab4199bc08458a4b23722f7f8286799.html"
-            scrolling="no"
-            allowTransparency
-            className="lightwidget-widget"
-            style={{ height: '400px' , width: '100%', border: 0}}
-            title="IPI Instagram"
-          ></iframe>
+    
+            {/* This div is the placeholder for your new Curator widget */}
+          <div id="curator-feed-default-feed-layout">
+            <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">
+              Powered by Curator.io
+            </a>
+          </div>
+
         </div>
       </section>
 
